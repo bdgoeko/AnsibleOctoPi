@@ -1,0 +1,18 @@
+[Unit]
+Description=OctoPrint start script
+After=multi-user.target
+
+[Service]
+Type=idle
+#Type=forking
+Restart=always
+User=pi
+Group=pi
+WorkingDirectory=/home/pi
+# 
+#ExecStart=/usr/bin/python /home/pi/OctoPrint/bin/octoprint > /home/pi/OctoPrint/log/octoprint.log 2>&1
+#ExecStart=/home/pi/OctoPrint/bin/octoprint serve > /home/pi/OctoPrint/log/octoprint.log 2>&1
+ExecStart=/home/pi/OctoPrint/bin/start-OctoPrint.sh
+
+[Install]
+WantedBy=multi-user.target

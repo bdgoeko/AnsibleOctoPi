@@ -1,0 +1,66 @@
+
+Arg...!
+
+Install octopi
+  update ? 
+Install mpeg streamer
+  config
+  add to octo pi ? 
+
+
+Manualy set apikeys ? possible ? 
+Manually set accounts ? possbile ? 
+
+what else ? 
+
+
+can run raspberry pi os on Pi 3...
+https://en.wikipedia.org/wiki/Raspberry_Pi_OS
+https://en.wikipedia.org/wiki/Raspberry_Pi
+
+will setup lite to install... and have that install what is needed
+
+Octo print says need python 3 (which python 3 ? ) and pip
+
+https://octoprint.org/download/
+
+also need the video for the camera..
+
+
+https://raspberry-valley.azurewebsites.net/Python-Default-Version/
+
+set raspian os  default python version to python3
+  sudo update-alternatives --list python
+
+Not sure how I want to do that ?
+  thinking I will get the version from python3 command
+  then add that to the path until I hit the file ? 
+
+ls -l /usr/bin/python
+ls -l /usr/bin/python3
+
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 2
+
+
+    apt-get install python3-venv
+    OctoPrint/bin/pip install OctoPrint
+    ./OctoPrint/bin/octoprint serve
+
+install instructions
+  python -m venv OctoPrint
+  OctoPrint/bin/pip install OctoPrint
+  ./Octoprint/bin/octoprint serve
+  
+
+Prusa MK3S OctoPrint Settings
+https://help.prusa3d.com/en/article/octoprint-configuration-and-install_2182#launching-and-configuring-octoprint
+
+MK3S Rectangular Lower left Yes 250mm 210mm 210mm X: 0/250, Y: -4/210, Z: 0/210
+All other setting default.
+
+Printer config @ip:5000
+
+? install nginx to redirect 80/443 to :5000 ? 
+
+

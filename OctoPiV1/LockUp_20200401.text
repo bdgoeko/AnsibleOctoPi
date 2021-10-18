@@ -1,0 +1,17 @@
+
+Locks up hard....
+Loses network
+Loses keyboard.
+
+Messages on screen about locked up CPU's 
+
+Have picture from my cell phone.
+
+https://community.octoprint.org/t/octopi-freezes-on-rp-3b/1599/23
+
+On console, 
+Had ... "watchdog: BUG: soft lockup - CPU#0 stuck for 22x!"
+watchdog: BUG: soft lockup - CPU#0 stuck for 22s! [(md-udevd):10992]
+
+and
+watchdog: BUG: soft lockup - CPU#0 stuck for 22s! [kworker/2:3:938]

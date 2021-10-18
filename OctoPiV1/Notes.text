@@ -1,0 +1,338 @@
+
+
+My OctoPi machine
+http://10.1.1.184:5000
+http://10.1.1.178:5000
+ ** need to nail ip.. arg.
+
+Streamer Docs
+https://community.octoprint.org/t/available-mjpg-streamer-configuration-options/1106
+
+Best OctoPi plugins
+https://www.youtube.com/watch?v=Zq1sFBgxy8o
+
+PrusaSlicer Thumbnails Plugin
+https://plugins.octoprint.org/plugins/prusaslicerthumbnails/?utm_medium=announcements&utm_source=octoprint&utm_content=1.4.0
+
+Change Filament Plugin
+https://plugins.octoprint.org/plugins/Change_Filament/
+
+
+Printable webcam mounting system - Octolapse friendly setup
+Octoprint camera setup
+https://www.youtube.com/watch?v=lgZ_B0ECcc8
+
+Nice adjustable camera mount, built for 3d printed media
+https://www.thingiverse.com/thing:3223979
+
+Had problem with Ubutu 18 on Raspberry Pi... arg.
+
+
+Have had it successfully print.
+
+Had to be sure Octoprint started and stayed running... ie
+
+./Octoprint/bin/octoprint 2> ~/octoprint_error.log > ~/octoprint.log &
+
+
+Send: M105
+Recv: ok T:16.7 /0.0 B:15.7 /0.0 T0:16.7 /0.0 @:0 B@:0 P:16.3 A:24.5
+Send: M105
+Recv: ok T:16.7 /0.0 B:16.0 /0.0 T0:16.7 /0.0 @:0 B@:0 P:16.2 A:24.7
+Send: M105
+Recv: ok T:16.1 /0.0 B:16.0 /0.0 T0:16.1 /0.0 @:0 B@:0 P:16.3 A:24.1
+Send: M105
+Recv: ok T:16.3 /0.0 B:16.1 /0.0 T0:16.3 /0.0 @:0 B@:0 P:16.3 A:24.7
+Send: M105
+Recv: ok T:16.1 /0.0 B:15.7 /0.0 T0:16.1 /0.0 @:0 B@:0 P:16.1 A:24.8
+Send: M105
+Recv: ok T:16.0 /0.0 B:16.2 /0.0 T0:16.0 /0.0 @:0 B@:0 P:16.2 A:25.3
+Send: M105
+Recv: ok T:15.8 /0.0 B:15.9 /0.0 T0:15.8 /0.0 @:0 B@:0 P:16.2 A:24.8
+Send: M105
+Recv: ok T:15.9 /0.0 B:16.4 /0.0 T0:15.9 /0.0 @:0 B@:0 P:16.1 A:24.2
+Send: M105
+Recv: ok T:16.7 /0.0 B:15.9 /0.0 T0:16.7 /0.0 @:0 B@:0 P:16.2 A:25.1
+Send: M105
+Recv: ok T:16.1 /0.0 B:16.1 /0.0 T0:16.1 /0.0 @:0 B@:0 P:16.1 A:24.4
+Send: M105
+Recv: ok T:15.8 /0.0 B:16.0 /0.0 T0:15.8 /0.0 @:0 B@:0 P:16.2 A:24.5
+Send: M105
+Recv: ok T:16.1 /0.0 B:16.0 /0.0 T0:16.1 /0.0 @:0 B@:0 P:16.2 A:24.8
+Send: M105
+Recv: ok T:16.4 /0.0 B:15.9 /0.0 T0:16.4 /0.0 @:0 B@:0 P:16.2 A:24.0
+Send: M105
+Recv: ok T:16.5 /0.0 B:15.9 /0.0 T0:16.5 /0.0 @:0 B@:0 P:16.1 A:25.3
+Send: M105
+Recv: ok T:15.9 /0.0 B:15.4 /0.0 T0:15.9 /0.0 @:0 B@:0 P:16.3 A:24.4
+Send: M105
+Recv: ok T:16.4 /0.0 B:16.4 /0.0 T0:16.4 /0.0 @:0 B@:0 P:16.2 A:24.8
+Send: M105
+Recv: ok T:16.5 /0.0 B:15.7 /0.0 T0:16.5 /0.0 @:0 B@:0 P:16.3 A:24.8
+Send: M105
+Recv: ok T:16.0 /0.0 B:15.8 /0.0 T0:16.0 /0.0 @:0 B@:0 P:16.2 A:24.8
+Send: M105
+Recv: ok T:16.2 /0.0 B:16.0 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.4 A:23.9
+Send: M105
+Recv: ok T:15.8 /0.0 B:16.4 /0.0 T0:15.8 /0.0 @:0 B@:0 P:16.1 A:24.7
+Send: M105
+Recv: ok T:15.8 /0.0 B:16.0 /0.0 T0:15.8 /0.0 @:0 B@:0 P:16.2 A:24.7
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.7 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.2 A:24.6
+Send: M105
+Recv: ok T:16.0 /0.0 B:15.9 /0.0 T0:16.0 /0.0 @:0 B@:0 P:16.2 A:25.0
+Send: M105
+Recv: ok T:16.2 /0.0 B:16.0 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.2 A:24.6
+Send: M105
+Recv: ok T:16.2 /0.0 B:16.2 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.2 A:24.5
+Send: M105
+Recv: ok T:16.4 /0.0 B:15.7 /0.0 T0:16.4 /0.0 @:0 B@:0 P:16.2 A:25.0
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.9 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.3 A:24.6
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.9 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.2 A:23.9
+Send: M105
+Recv: ok T:16.4 /0.0 B:15.7 /0.0 T0:16.4 /0.0 @:0 B@:0 P:16.1 A:24.9
+Send: M105
+Recv: ok T:16.0 /0.0 B:16.1 /0.0 T0:16.0 /0.0 @:0 B@:0 P:16.2 A:24.2
+Send: M105
+Recv: ok T:16.3 /0.0 B:15.9 /0.0 T0:16.3 /0.0 @:0 B@:0 P:16.3 A:24.6
+Send: M105
+Recv: ok T:15.8 /0.0 B:15.5 /0.0 T0:15.8 /0.0 @:0 B@:0 P:16.2 A:24.2
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.9 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.2 A:24.4
+Send: M105
+Recv: ok T:16.1 /0.0 B:16.2 /0.0 T0:16.1 /0.0 @:0 B@:0 P:16.1 A:25.0
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.8 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.2 A:24.2
+Send: M105
+Recv: ok T:16.1 /0.0 B:16.0 /0.0 T0:16.1 /0.0 @:0 B@:0 P:16.1 A:25.0
+Send: M105
+Recv: ok T:16.3 /0.0 B:15.9 /0.0 T0:16.3 /0.0 @:0 B@:0 P:15.9 A:24.0
+Send: M105
+Recv: ok T:16.0 /0.0 B:16.1 /0.0 T0:16.0 /0.0 @:0 B@:0 P:16.2 A:24.1
+Send: M105
+Recv: ok T:15.6 /0.0 B:15.6 /0.0 T0:15.6 /0.0 @:0 B@:0 P:16.1 A:24.2
+Send: M105
+Recv: ok T:16.0 /0.0 B:15.9 /0.0 T0:16.0 /0.0 @:0 B@:0 P:16.2 A:25.0
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.9 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.2 A:25.1
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.7 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.1 A:24.6
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.6 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.2 A:24.2
+Send: M105
+Recv: ok T:15.8 /0.0 B:15.7 /0.0 T0:15.8 /0.0 @:0 B@:0 P:16.2 A:24.1
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.7 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.1 A:24.2
+Send: M105
+Recv: ok T:15.9 /0.0 B:15.9 /0.0 T0:15.9 /0.0 @:0 B@:0 P:16.2 A:24.1
+Send: M105
+Recv: ok T:16.5 /0.0 B:16.1 /0.0 T0:16.5 /0.0 @:0 B@:0 P:16.2 A:24.5
+Send: M105
+Recv: ok T:16.6 /0.0 B:15.6 /0.0 T0:16.6 /0.0 @:0 B@:0 P:16.1 A:25.1
+Send: M105
+Recv: ok T:15.8 /0.0 B:15.6 /0.0 T0:15.8 /0.0 @:0 B@:0 P:16.2 A:24.3
+Send: M105
+Recv: ok T:16.3 /0.0 B:15.8 /0.0 T0:16.3 /0.0 @:0 B@:0 P:16.2 A:24.8
+Send: M105
+Recv: ok T:16.2 /0.0 B:16.2 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.2 A:24.8
+Send: M105
+Recv: ok T:15.9 /0.0 B:15.6 /0.0 T0:15.9 /0.0 @:0 B@:0 P:16.3 A:24.6
+Send: M105
+Recv: ok T:16.1 /0.0 B:16.0 /0.0 T0:16.1 /0.0 @:0 B@:0 P:16.2 A:24.2
+Send: M105
+Recv: ok T:16.4 /0.0 B:15.8 /0.0 T0:16.4 /0.0 @:0 B@:0 P:16.0 A:24.7
+Send: M105
+Recv: ok T:15.9 /0.0 B:15.6 /0.0 T0:15.9 /0.0 @:0 B@:0 P:16.2 A:25.2
+Send: M105
+Recv: ok T:16.6 /0.0 B:15.9 /0.0 T0:16.6 /0.0 @:0 B@:0 P:16.2 A:24.2
+Send: M105
+Recv: ok T:16.1 /0.0 B:15.9 /0.0 T0:16.1 /0.0 @:0 B@:0 P:16.1 A:25.1
+Send: M105
+Recv: ok T:16.0 /0.0 B:15.6 /0.0 T0:16.0 /0.0 @:0 B@:0 P:16.2 A:24.8
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.9 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.3 A:25.1
+Send: M105
+Recv: ok T:15.7 /0.0 B:16.0 /0.0 T0:15.7 /0.0 @:0 B@:0 P:16.1 A:24.5
+Send: M105
+Recv: ok T:16.1 /0.0 B:15.9 /0.0 T0:16.1 /0.0 @:0 B@:0 P:16.0 A:24.4
+Send: M105
+Recv: ok T:16.6 /0.0 B:16.0 /0.0 T0:16.6 /0.0 @:0 B@:0 P:16.2 A:24.7
+Send: M105
+Recv: ok T:15.8 /0.0 B:15.8 /0.0 T0:15.8 /0.0 @:0 B@:0 P:16.2 A:24.7
+Send: M105
+Recv: ok T:16.3 /0.0 B:16.1 /0.0 T0:16.3 /0.0 @:0 B@:0 P:16.0 A:24.8
+Send: M105
+Recv: ok T:15.8 /0.0 B:15.9 /0.0 T0:15.8 /0.0 @:0 B@:0 P:16.2 A:25.0
+Send: M105
+Recv: ok T:16.1 /0.0 B:16.0 /0.0 T0:16.1 /0.0 @:0 B@:0 P:16.2 A:24.8
+Send: M105
+Recv: ok T:16.3 /0.0 B:15.7 /0.0 T0:16.3 /0.0 @:0 B@:0 P:16.1 A:24.2
+Send: M105
+Recv: ok T:16.0 /0.0 B:15.9 /0.0 T0:16.0 /0.0 @:0 B@:0 P:16.1 A:24.9
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.5 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.1 A:24.7
+Send: M105
+Recv: ok T:16.2 /0.0 B:16.1 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.1 A:25.1
+Send: M105
+Recv: ok T:15.9 /0.0 B:15.7 /0.0 T0:15.9 /0.0 @:0 B@:0 P:16.2 A:24.6
+Send: M105
+Recv: ok T:15.8 /0.0 B:15.9 /0.0 T0:15.8 /0.0 @:0 B@:0 P:16.1 A:24.2
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.7 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.3 A:24.2
+Send: M105
+Recv: ok T:16.4 /0.0 B:15.9 /0.0 T0:16.4 /0.0 @:0 B@:0 P:16.2 A:24.6
+Send: M105
+Recv: ok T:15.7 /0.0 B:15.9 /0.0 T0:15.7 /0.0 @:0 B@:0 P:16.1 A:24.5
+Send: M105
+Recv: ok T:16.1 /0.0 B:15.9 /0.0 T0:16.1 /0.0 @:0 B@:0 P:16.0 A:24.6
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.7 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.1 A:24.7
+Send: M105
+Recv: ok T:15.9 /0.0 B:15.8 /0.0 T0:15.9 /0.0 @:0 B@:0 P:16.1 A:24.1
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.9 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.1 A:24.4
+Send: M105
+Recv: ok T:15.9 /0.0 B:16.1 /0.0 T0:15.9 /0.0 @:0 B@:0 P:15.9 A:25.1
+Send: M105
+Recv: ok T:16.4 /0.0 B:15.8 /0.0 T0:16.4 /0.0 @:0 B@:0 P:16.2 A:24.2
+Send: M105
+Recv: ok T:15.9 /0.0 B:16.1 /0.0 T0:15.9 /0.0 @:0 B@:0 P:16.2 A:24.4
+Send: M105
+Recv: ok T:15.9 /0.0 B:16.2 /0.0 T0:15.9 /0.0 @:0 B@:0 P:16.2 A:24.7
+Send: M105
+Recv: ok T:16.1 /0.0 B:16.2 /0.0 T0:16.1 /0.0 @:0 B@:0 P:15.8 A:24.1
+Send: M105
+Recv: ok T:15.7 /0.0 B:15.7 /0.0 T0:15.7 /0.0 @:0 B@:0 P:16.1 A:23.8
+Send: M105
+Recv: ok T:16.5 /0.0 B:16.0 /0.0 T0:16.5 /0.0 @:0 B@:0 P:16.1 A:24.4
+Send: M105
+Recv: ok T:16.4 /0.0 B:15.7 /0.0 T0:16.4 /0.0 @:0 B@:0 P:16.0 A:24.4
+Send: M105
+Recv: ok T:16.3 /0.0 B:15.7 /0.0 T0:16.3 /0.0 @:0 B@:0 P:15.9 A:24.2
+Send: M105
+Recv: ok T:16.3 /0.0 B:15.8 /0.0 T0:16.3 /0.0 @:0 B@:0 P:16.0 A:24.2
+Send: M105
+Recv: ok T:16.0 /0.0 B:16.0 /0.0 T0:16.0 /0.0 @:0 B@:0 P:16.1 A:24.2
+Send: M105
+Recv: ok T:15.4 /0.0 B:15.9 /0.0 T0:15.4 /0.0 @:0 B@:0 P:16.1 A:24.2
+Send: M105
+Recv: ok T:16.0 /0.0 B:15.7 /0.0 T0:16.0 /0.0 @:0 B@:0 P:16.1 A:24.2
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.9 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.0 A:24.9
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.9 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.0 A:25.0
+Send: M105
+Recv: ok T:15.8 /0.0 B:15.9 /0.0 T0:15.8 /0.0 @:0 B@:0 P:16.1 A:24.1
+Send: M105
+Recv: ok T:15.4 /0.0 B:15.9 /0.0 T0:15.4 /0.0 @:0 B@:0 P:16.0 A:24.7
+Send: M105
+Recv: ok T:15.7 /0.0 B:15.5 /0.0 T0:15.7 /0.0 @:0 B@:0 P:16.0 A:24.6
+Send: M105
+Recv: ok T:16.0 /0.0 B:15.7 /0.0 T0:16.0 /0.0 @:0 B@:0 P:16.1 A:24.4
+Send: M105
+Recv: ok T:15.7 /0.0 B:15.9 /0.0 T0:15.7 /0.0 @:0 B@:0 P:16.0 A:24.2
+Send: M105
+Recv: ok T:15.8 /0.0 B:16.1 /0.0 T0:15.8 /0.0 @:0 B@:0 P:15.9 A:24.3
+Send: M105
+Recv: ok T:15.8 /0.0 B:15.7 /0.0 T0:15.8 /0.0 @:0 B@:0 P:15.9 A:23.9
+Send: M105
+Recv: ok T:16.4 /0.0 B:15.4 /0.0 T0:16.4 /0.0 @:0 B@:0 P:16.1 A:24.2
+Send: M105
+Recv: ok T:16.3 /0.0 B:15.8 /0.0 T0:16.3 /0.0 @:0 B@:0 P:16.1 A:23.9
+Send: M105
+Recv: ok T:15.8 /0.0 B:15.8 /0.0 T0:15.8 /0.0 @:0 B@:0 P:16.1 A:24.0
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.8 /0.0 T0:16.2 /0.0 @:0 B@:0 P:15.9 A:25.2
+Send: M105
+Recv: ok T:15.9 /0.0 B:15.4 /0.0 T0:15.9 /0.0 @:0 B@:0 P:16.0 A:25.0
+Send: M105
+Recv: ok T:16.0 /0.0 B:15.7 /0.0 T0:16.0 /0.0 @:0 B@:0 P:15.9 A:24.6
+Send: M105
+Recv: ok T:16.4 /0.0 B:15.9 /0.0 T0:16.4 /0.0 @:0 B@:0 P:16.1 A:24.5
+Send: M105
+Recv: ok T:15.9 /0.0 B:16.1 /0.0 T0:15.9 /0.0 @:0 B@:0 P:16.1 A:24.0
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.6 /0.0 T0:16.2 /0.0 @:0 B@:0 P:15.9 A:25.2
+Send: M105
+Recv: ok T:16.1 /0.0 B:15.9 /0.0 T0:16.1 /0.0 @:0 B@:0 P:15.8 A:24.9
+Send: M105
+Recv: ok T:15.7 /0.0 B:15.6 /0.0 T0:15.7 /0.0 @:0 B@:0 P:16.1 A:24.1
+Send: M105
+Recv: ok T:15.8 /0.0 B:15.5 /0.0 T0:15.8 /0.0 @:0 B@:0 P:16.1 A:24.4
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.8 /0.0 T0:16.2 /0.0 @:0 B@:0 P:15.9 A:24.5
+Send: M105
+Recv: ok T:15.9 /0.0 B:15.5 /0.0 T0:15.9 /0.0 @:0 B@:0 P:16.1 A:23.7
+Send: M105
+Recv: ok T:15.6 /0.0 B:15.9 /0.0 T0:15.6 /0.0 @:0 B@:0 P:15.9 A:24.0
+Send: M105
+Recv: ok T:15.6 /0.0 B:16.0 /0.0 T0:15.6 /0.0 @:0 B@:0 P:15.8 A:25.4
+Send: M105
+Recv: ok T:16.3 /0.0 B:16.0 /0.0 T0:16.3 /0.0 @:0 B@:0 P:15.9 A:24.8
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.9 /0.0 T0:16.2 /0.0 @:0 B@:0 P:15.9 A:24.4
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.6 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.1 A:24.1
+Send: M105
+Recv: ok T:16.2 /0.0 B:16.2 /0.0 T0:16.2 /0.0 @:0 B@:0 P:16.1 A:23.9
+Send: M105
+Recv: ok T:15.9 /0.0 B:15.9 /0.0 T0:15.9 /0.0 @:0 B@:0 P:15.8 A:24.3
+Send: M105
+Recv: ok T:16.1 /0.0 B:15.8 /0.0 T0:16.1 /0.0 @:0 B@:0 P:16.0 A:24.5
+Send: M105
+Recv: ok T:15.6 /0.0 B:15.7 /0.0 T0:15.6 /0.0 @:0 B@:0 P:16.1 A:24.3
+Send: M105
+Recv: ok T:15.6 /0.0 B:15.4 /0.0 T0:15.6 /0.0 @:0 B@:0 P:15.9 A:24.8
+Send: M105
+Recv: ok T:16.1 /0.0 B:16.1 /0.0 T0:16.1 /0.0 @:0 B@:0 P:15.9 A:24.2
+Send: M105
+Recv: ok T:16.0 /0.0 B:15.5 /0.0 T0:16.0 /0.0 @:0 B@:0 P:15.8 A:23.5
+Send: M105
+Recv: ok T:16.0 /0.0 B:15.8 /0.0 T0:16.0 /0.0 @:0 B@:0 P:15.9 A:24.4
+Send: M105
+Recv: ok T:16.0 /0.0 B:15.9 /0.0 T0:16.0 /0.0 @:0 B@:0 P:15.9 A:24.0
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.7 /0.0 T0:16.2 /0.0 @:0 B@:0 P:15.9 A:24.3
+Send: M105
+Recv: ok T:15.7 /0.0 B:16.0 /0.0 T0:15.7 /0.0 @:0 B@:0 P:16.0 A:24.3
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.9 /0.0 T0:16.2 /0.0 @:0 B@:0 P:15.9 A:24.3
+Send: M105
+Recv: ok T:15.8 /0.0 B:15.7 /0.0 T0:15.8 /0.0 @:0 B@:0 P:15.9 A:23.7
+Send: M105
+Recv: ok T:16.2 /0.0 B:15.7 /0.0 T0:16.2 /0.0 @:0 B@:0 P:15.9 A:24.4
+Send: M105
+Recv: ok T:15.9 /0.0 B:16.1 /0.0 T0:15.9 /0.0 @:0 B@:0 P:15.8 A:24.1
+Send: M105
+Recv: ok T:15.8 /0.0 B:15.8 /0.0 T0:15.8 /0.0 @:0 B@:0 P:16.0 A:24.3
+Send: M105
+Recv: ok T:16.2 /0.0 B:16.0 /0.0 T0:16.2 /0.0 @:0 B@:0 P:15.8 A:25.2
+Send: M105
+Recv: ok T:15.9 /0.0 B:15.7 /0.0 T0:15.9 /0.0 @:0 B@:0 P:16.1 A:24.1
+Send: M105
+Recv: ok T:15.6 /0.0 B:15.6 /0.0 T0:15.6 /0.0 @:0 B@:0 P:16.0 A:24.8
+Send: M105
+Recv: ok T:15.8 /0.0 B:15.9 /0.0 T0:15.8 /0.0 @:0 B@:0 P:15.9 A:24.7
+Send: M105
+Recv: ok T:15.8 /0.0 B:15.6 /0.0 T0:15.8 /0.0 @:0 B@:0 P:16.0 A:24.6
+Send: M105
+Recv: ok T:15.8 /0.0 B:15.9 /0.0 T0:15.8 /0.0 @:0 B@:0 P:16.0 A:23.9
+Send: M105
+Recv: ok T:15.7 /0.0 B:15.6 /0.0 T0:15.7 /0.0 @:0 B@:0 P:16.1 A:23.6
+Send: M105
+Recv: ok T:15.6 /0.0 B:15.9 /0.0 T0:15.6 /0.0 @:0 B@:0 P:16.0 A:24.6
+Send: M105
+Recv: ok T:15.6 /0.0 B:15.9 /0.0 T0:15.6 /0.0 @:0 B@:0 P:16.1 A:24.4
+Send: M105
+Recv: ok T:15.7 /0.0 B:15.7 /0.0 T0:15.7 /0.0 @:0 B@:0 P:15.9 A:24.8
+Recv: Error:0
+Changing monitoring state from "Operational" to "Error: 0"
+Send: M112
+Send: N45165 M112*34
+Send: N45166 M104 T0 S0*33
+Send: N45167 M140 S0*100
+Changing monitoring state from "Error: 0" to "Offline (Error: 0)"
+Connection closed, closing down monitor
+Sat May 30 13:50:06 CDT 2020

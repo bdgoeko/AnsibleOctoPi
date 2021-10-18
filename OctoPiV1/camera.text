@@ -1,0 +1,23 @@
+
+
+After wireing camera
+adding longer cable
+
+enable in hardware
+reboot
+
+download webcam streamer
+compile
+
+start streamer, 
+$ mjpg_streamer -o "output_http.so -w ./www" -i "input_raspicam.so -x 1280 -y 720 -fps 15 -vf"
+
+have octoprint connect to webcam, 
+Stream, 
+http://127.0.0.1:8080/?action=snapshot
+http://{ip}:8080/?action=snapshot
+
+Still picture
+http://127.0.0.1:8080/?action=snapshot
+http://{ip}:8080/?action=snapshot
+

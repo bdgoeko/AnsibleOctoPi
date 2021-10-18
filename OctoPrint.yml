@@ -1,0 +1,83 @@
+---
+- name: Setup OctoPrint
+  hosts: NewPi
+
+#  vars_prompt:
+#    - name: "ssid"
+#      prompt: "Please enter your SSID Name:"
+#
+#  vars:
+#    hostname: ssid
+
+## Package Managment
+  # install needed packages  Load needed packages
+  tasks:
+  - name: update package list
+    apt:
+      update_cache: yes
+      cache_valid_time: 3600
+
+  - name: install python3
+    apt:
+      name: python3
+
+  - name: install venv
+    apt:
+      name: python3-venv
+
+# is there a way to load the octoprint config from the cli ? 
+
+# is there way to load plugins from the cli ? 
+
+# create log dir ${HOME?}/OctoPrint/log
+
+  - name: create OctoPrint log directory
+    file:
+      path: /home/pi/OctoPrint/log
+      state: directory
+      owner: pi
+      group: pi
+      mode: 0755
+
+  - name: copy OctoPrint systemd config
+    copy:
+      src: files/OctoPrint.service
+      dest: /lib/systemd/system/OctoPrint.service
+      owner: root
+      group: root
+      mode: 0644
+
+  - name: copy OctoPrint startup file
+    copy:
+      src: files/start-OctoPrint.sh
+      dest: /home/pi/OctoPrint/bin/start-OctoPrint.sh
+      owner: pi
+      group: pi
+      mode: 0555
+
+# setup systemd startup
+#   load script to start OctoPrint
+#   setup systemd file /lib/systemd/system/OctoPrint.service ?
+
+  - systemd:
+    #daemon_reload: yes
+    name: OctoPrint
+    enabled: yes
+    state: started
+
+  - name: Restart systemd
+    command: systemctl daemon-reload
+
+  - name: Start OctoPrint
+    command: systemctl start OctoPrint
+
+# start the service
+
+# check to see we get a response from http://${IP}:5000
+
+#  - name: reboot server
+#      command: /sbin/reboot
+
+  handlers:
+#      - name: restart hostapd
+#            service: name=hostapd state=restarted

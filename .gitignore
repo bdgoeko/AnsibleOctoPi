@@ -1,0 +1,16 @@
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# lets not upload my WiFi info
+wpa-supplicant.txt
+
+# Lets not upload my OctoPrint backup file
+*backup*.zip
+

@@ -1,0 +1,199 @@
+
+https://github.com/rajughoshdev/ansible-roles-example
+https://www.golinuxcloud.com/create-ansible-role-with-example-playbooks/
+https://www.ansible.com/resources/ebooks/mastering-ansible
+https://www.learnitguide.net/2018/02/ansible-roles-explained-with-examples.html
+
+
+Stream URL for streamer,
+http://10.1.1.91:8080/?action=stream
+
+PSU GPIO
+https://github.com/kantlivelong/OctoPrint-PSUControl-RPiGPIO/archive/master.zip
+Command line:
+pip install "https://github.com/kantlivelong/OctoPrint-PSUControl-RPiGPIO/archive/master.zip"
+
+PSU Control Plugin
+https://github.com/kantlivelong/OctoPrint-PSUControl/archive/master.zip
+Command line:
+pip install "https://github.com/kantlivelong/OctoPrint-PSUControl/archive/master.zip"
+
+systemd setup
+https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files
+
+Ways to startup processes on RaspberryPi
+https://www.dexterindustries.com/howto/run-a-program-on-your-raspberry-pi-at-startup/
+
+https://www.golinuxcloud.com/ansible-roles-directory-structure-tutorial/
+
+Building mjpg_streamer 
+https://blog.miguelgrinberg.com/post/how-to-build-and-run-mjpg-streamer-on-the-raspberry-pi
+
+OctoPrint GitHub
+https://github.com/OctoPrint/OctoPrint
+
+OctoPrint Relay GPIO plugin
+https://github.com/kantlivelong/OctoPrint-PSUControl-RPiGPIO
+
+
+https://help.prusa3d.com/en/article/octoprint-configuration-and-install_2182#launching-and-configuring-octoprint
+
+
+
+Relay for printer on GPIO 23
+Second realy on GPIO 24
+  but I think using both relays draw too much power and RaspberryPi (and relays) become unstable... :(
+
+
+
+
+__STEPS__
+ -1) Find image to put on
+     https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2021-05-28/2021-05-07-raspios-buster-armhf-lite.zip.torrent
+     ${RASP_OS}
+     
+  0) find device to put image on flash device
+    use lsblk 
+    goeko@penguinfish:~$ lsblk | cut -d\  -f1 | grep ^sd
+    look for diff
+    the request confirmation
+    lsblk | grep ${FLASH_DRIVE}
+    
+
+  1) put image on flash device
+     goeko@penguinfish:~/Projects/RaspberryPi/OS_Images$ sudo dd  if=2021-03-04-raspios-buster-armhf-full.img of=/dev/sdg ; sync;sync;sync
+     sudo dd  if=${RASP_OS} of=${FLASH_DRIVE} ; sync;sync;sync
+      ? how to "umount" ? or update the mount ?
+
+      How to reset drive...
+      https://zedt.eu/tech/linux/soft-resetting-sata-devices-linux/
+
+root@penguinfish:~# echo 1 > /sys/block/sdh/device/delete 
+root@penguinfish:~# echo "- - -" > /sys/class/scsi_host/host9/scan 
+root@penguinfish:~# lsblk
+NAME        MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+loop0         7:0    0  99.4M  1 loop /snap/core/11420
+loop1         7:1    0 246.5M  1 loop /snap/brave/130
+loop2         7:2    0  61.7M  1 loop /snap/core20/1026
+loop4         7:4    0 246.5M  1 loop /snap/brave/129
+loop5         7:5    0 196.5M  1 loop /snap/rpi-imager/184
+loop6         7:6    0 215.4M  1 loop /snap/rpi-imager/170
+loop7         7:7    0  55.5M  1 loop /snap/core18/2074
+loop8         7:8    0  61.8M  1 loop /snap/core20/1081
+loop9         7:9    0  65.1M  1 loop /snap/gtk-common-themes/1515
+loop10        7:10   0  99.4M  1 loop /snap/core/11606
+loop11        7:11   0  55.4M  1 loop /snap/core18/2128
+loop12        7:12   0     4K  1 loop /snap/bare/5
+loop13        7:13   0  65.2M  1 loop /snap/gtk-common-themes/1519
+sda           8:0    0 931.5G  0 disk 
+├─sda1        8:1    0 414.7G  0 part 
+├─sda2        8:2    0  14.4G  0 part 
+└─sda3        8:3    0 502.5G  0 part 
+sdb           8:16   0 238.5G  0 disk 
+├─sdb1        8:17   0   260M  0 part 
+├─sdb2        8:18   0    16M  0 part 
+├─sdb3        8:19   0 226.4G  0 part 
+├─sdb4        8:20   0   980M  0 part 
+└─sdb5        8:21   0  10.8G  0 part 
+sdh           8:112  1  29.1G  0 disk 
+├─sdh1        8:113  1   256M  0 part 
+└─sdh2        8:114  1   1.5G  0 part 
+sr0          11:0    1  1024M  0 rom  
+sr1          11:1    1  1024M  0 rom  
+nvme0n1     259:0    0 238.5G  0 disk 
+├─nvme0n1p1 259:1    0   260M  0 part /boot/efi
+├─nvme0n1p2 259:2    0    16M  0 part 
+├─nvme0n1p3 259:3    0 120.2G  0 part 
+├─nvme0n1p4 259:4    0   980M  0 part 
+├─nvme0n1p5 259:5    0 111.8G  0 part /
+└─nvme0n1p6 259:6    0   5.3G  0 part [SWAP]
+root@penguinfish:~#
+
+  mount | grep ${FLASH_DEVICE} |grep root
+
+  ${RASP_ROOT}=
+
+  2) set ip on image
+    cd ${RASP_ROOT}
+echo "interface eth0
+static ip_addres=10.1.1.91
+static router=10.1.1.1
+static domain_name_servers=10.1.1.18" >> etc/dhcpcd.conf
+
+  3) add ssh key for pi login
+    mkdir home/pi/.ssh
+    cp ~goeko/.ssh/id_rsa.pub home/pi/.ssh/authorized_keys
+    
+
+  4) sync;sync;sync; umount ${FLASH_DRIVE}
+
+  5) boot flash
+
+  
+  6) Ansible
+     Update os
+
+    7) ? ?
+
+    8) load octoprint
+      ? octopi config ? 
+      ? setup octoprint account ?
+      ? setup api key ?
+    9) ? change pi ?
+      setup local account
+
+
+__NOTES__
+
+Thu 16 Sep 2021 03:21:39 PM CDT
+
+need to put image to flash
+add ssh key access
+set ip... ? 
+
+First boot...
+ will probably reconfigure... max flash use...
+
+reset ip ? 
+reboot ? 
+need to update
+
+secure pi account ? 
+
+add additional accounts ? 
+
+
+
+
+https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2021-05-28/2021-05-07-raspios-buster-armhf-lite.zip.torrent
+
+
+
+
+Device on Penguin fish... 20210922
+ sdh
+
+Rasbian, set 
+vi /etc/dhcpcd.conf
+
+dd if= of=/dev/sdh
+
+
+__Writing_image_to_SD_Card___
+
+use 'lsblk -p' to list devices
+
+to write, use  (note bs=1M DID NOT WORK!)
+  dd  if={new_image} of={device for SD Card}
+
+goeko@penguinfish:~/Projects/RaspberryPi/OS_Images$ sudo dd if=2021-03-04-raspios-bu
+ster-armhf-full.img of=/dev/sdg ; sync;sync;sync
+
+More info here:
+https://www.raspberrypi.org/documentation/installation/installing-images/linux.md
+
+
+For NOOBs, see instruction in NOOB directory
+
+Linux remove device, rescan host (add device)
+https://zedt.eu/tech/linux/soft-resetting-sata-devices-linux/
